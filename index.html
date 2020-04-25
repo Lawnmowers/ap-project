@@ -1,27 +1,34 @@
+<!--Max Wong CSP AP Project-->
 <!DOCTYPE html>
+
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>CSP AP Project</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
-  </head>
-  <body>
-    <h1>
-      Planner/Organizer?
-    </h1>
+</head>
 
-    <h2>
-      Input your tasks here
-    </h2>
-    
-    <p>
-      <input id="task-input"></input><button id="submit-button">Submit</button>
-    </p>  
-    <ul id="task-list">
-      <li id="task"></li>
+<body>
+    <div id="topPart">
+        <h1>
+            Planner
+        </h1>
+        <h2>
+            Input your tasks here
+        </h2>
+
+        <form onsubmit="return false">
+            <input type="text" id="taskInput">
+            <button id="submitButton" onclick="addTask(this.form)">Submit</button>
+        </form>
+    </div>
+    <ul id="taskList">
+        <p id="referenceNode"></p>
     </ul>
 
     <script src="script.js"></script>
-  </body>
+</body>
+
 </html>
