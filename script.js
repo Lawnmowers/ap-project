@@ -1,14 +1,12 @@
-var taskInput = document.getElementById("task-input");
-var task = document.getElementById("task");
-var submitButton = document.getElementById("submit-button");
+function addTask(form) {
+    if (form.taskInput){
+        var newChild = document.createElement("li");
+        var divider = document.createElement("hr");
+        var referenceNode = document.getElementById("referenceNode");
 
-taskInput.addEventListener("input", addInput);
-submitButton.addEventListener("click", submit);
-
-function addInput() {
-  return taskInput.value;
-}
-
-function submit(){
-  task.innerHTML = addInput();
+        newChild.innerHTML = form.taskInput.value;
+        document.getElementById("taskList").insertBefore(newChild, referenceNode);
+        document.getElementById("taskList").insertBefore(divider, referenceNode);
+        form.reset();
+    } 
 }
