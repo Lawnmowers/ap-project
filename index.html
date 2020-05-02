@@ -18,8 +18,11 @@
         <h2>
             Input your tasks here
         </h2>
+        <p id="tip">
+            Tip: Click on a task to set it as complete.
+        </p>
 
-        <form onsubmit="return false">
+        <form id="form" onsubmit="return false">
             <input type="text" id="taskInput">
             <button id="submitButton" onclick="addTask(this.form)">Submit</button>
         </form>
@@ -29,6 +32,12 @@
             <button id="referenceButton">Delete</button>
         </li>
     </ul>
+
+    <footer id="footer">
+        <p>
+            Max Wong | AP Computer Science Principles | Create Task | 2020
+        </p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
